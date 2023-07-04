@@ -1,0 +1,81 @@
+03:05:06.310 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+03:05:06.327 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @2096442d
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:560) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.8.0.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.8.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:94) ~[selenium-chrome-driver-4.8.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82) ~[selenium-chrome-driver-4.8.0.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:50) ~[selenium-chrome-driver-4.8.0.jar:?]
+	at resources.Base.intializeDriver(Base.java:39) ~[classes/:?]
+	at tests.ThreeTest.testThree(ThreeTest.java:17) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:794) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.TestRunner.run(TestRunner.java:596) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64) ~[org.testng_7.4.0.r202105021533.jar:7.4.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+03:05:06.342 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+03:05:06.342 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+03:05:06.344 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 2116026368 bytes (maybe)
+03:05:06.344 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\skuma667\AppData\Local\Temp (java.io.tmpdir)
+03:05:06.344 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+03:05:06.344 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+03:05:06.346 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+03:05:06.346 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+03:05:06.348 [TestNG-tests-3] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+03:05:06.349 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+03:05:06.362 [TestNG-tests-3] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+03:05:06.397 [TestNG-tests-3] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+03:05:06.397 [TestNG-tests-3] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+03:05:06.420 [TestNG-tests-3] DEBUG io.netty.handler.ssl.JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+03:05:06.420 [TestNG-tests-3] DEBUG io.netty.handler.ssl.JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+03:05:06.461 [TestNG-tests-3] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+03:05:06.475 [TestNG-tests-3] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+03:05:06.475 [TestNG-tests-3] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+03:05:06.497 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@672d7fac
+03:05:06.503 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@19b86305
+03:05:06.509 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2ce3b399
+03:05:06.514 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@752a6595
+03:05:06.518 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@46238ce4
+03:05:06.522 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1c596f6e
+03:05:06.526 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2d177807
+03:05:06.531 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@bb7a6fd
+03:05:06.536 [TestNG-tests-3] TRACE io.netty.channel.nio.NioEventLoop - instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@51a94fc3
